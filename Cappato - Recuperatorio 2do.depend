@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1544622726 source:d:\cappato\cappato - recuperatorio 2do\empresa.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Empresa.h"
+
+1544623227 d:\cappato\cappato - recuperatorio 2do\linkedlist.h
+
+1544623998 d:\cappato\cappato - recuperatorio 2do\empresa.h
+	"LinkedList.h"
+
+1544623227 source:d:\cappato\cappato - recuperatorio 2do\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/LinkedList.h"
+
+1542984958 d:\cappato\inc\linkedlist.h
+
+1544625398 source:d:\cappato\cappato - recuperatorio 2do\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"utn.h"
+	"Parser.h"
+	"Controller.h"
+
+1544624161 source:d:\cappato\cappato - recuperatorio 2do\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Empresa.h"
+
+1544619310 source:d:\cappato\cappato - recuperatorio 2do\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1544618354 d:\cappato\cappato - recuperatorio 2do\utn.h
+
+1544625372 source:d:\cappato\cappato - recuperatorio 2do\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empresa.h"
+	"utn.h"
+	"LinkedList.h"
+
+1544624141 d:\cappato\cappato - recuperatorio 2do\parser.h
+
+1544623476 d:\cappato\cappato - recuperatorio 2do\controller.h
+	"Empresa.h"
+	"LinkedList.h"
+
