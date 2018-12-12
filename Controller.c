@@ -62,7 +62,7 @@ int controller_listAbonos(LinkedList* this, LinkedList* this2)
 {
     eAbono* auxiliarAbono;
     eCliente* auxiliarCliente;
-    int indice = 0;
+    int indice = -1;
     int largoListaDos = ll_len(this2);
     int idAuxAbono;
     int tipoAuxAbono;
@@ -73,9 +73,10 @@ int controller_listAbonos(LinkedList* this, LinkedList* this2)
     char numeroTelefonicoAuxCliente[21];
     int importeAuxCliente, i, j;
 
+
     if(this != NULL)
     {
-        if(ll_len(this) >= 0)
+        if(ll_len(this) > 0)
         {
             printf(" Id\t\tTipo\t\tId Cliente\t Importe Total   \n");
 
@@ -88,9 +89,7 @@ int controller_listAbonos(LinkedList* this, LinkedList* this2)
                 getImporteFinalAbono(auxiliarAbono, &importeFinalAuxAbono);
                 printf("%3d\t\t  %d\t\t    %d\t\t    %d\t\t  \n", idAuxAbono, tipoAuxAbono, idClienteAuxAbono, importeFinalAuxAbono);
 
-                printf("llega3");
-
-                for( j = 1; j <largoListaDos ; j++)
+                for(j = i + 1; j <largoListaDos ; j++)
                 {
                     auxiliarCliente = (eCliente*)ll_get(this2, j);
                     if(auxiliarAbono -> idCliente == auxiliarCliente -> id)
@@ -103,7 +102,6 @@ int controller_listAbonos(LinkedList* this, LinkedList* this2)
                     }
                 }
             }
-
             indice = 1;
         }
         else

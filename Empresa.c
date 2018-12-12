@@ -374,24 +374,22 @@ LinkedList* crearListaAbono (LinkedList* this)
                         setTipoAbono(abono, PERSONAL);
                         setImporteFinalAbono(abono, importeTotal);
                         setIdAbonoCliente(abono, clienteActual -> id);
-                        abono -> id = generarNextId();
+                        abono -> idCliente = generarNextId();
                     }
-                    else
+                    else if(contador >= 2 && contador <= 4)
                     {
-                        if(contador >= 2 && contador <= 4)
-                        {
-                            setTipoAbono(abono, FAMILIAR);
-                            setImporteFinalAbono(abono, importeTotal * 1.1);
-                            setIdAbonoCliente(abono, clienteActual -> id);
-                            abono -> id = generarNextId();
-                        }
-                        else
-                        {
-                            setTipoAbono(abono, CORPORATIVO);
-                            setImporteFinalAbono(abono, importeTotal * 1.2);
-                            setIdAbonoCliente(abono, clienteActual -> id);
-                            abono -> id = generarNextId();
-                        }
+                        setTipoAbono(abono, FAMILIAR);
+                        setImporteFinalAbono(abono, importeTotal);
+                        setIdAbonoCliente(abono, clienteActual -> id);
+                        abono -> idCliente = generarNextId();
+                    }
+                    else if (contador >= 5)
+                    {
+                        setTipoAbono(abono, CORPORATIVO);
+                        setImporteFinalAbono(abono, importeTotal);
+                        setIdAbonoCliente(abono, clienteActual -> id);
+                        abono -> idCliente = generarNextId();
+                    }
                     }
                     ll_add(listaAbono, abono);
                     contador = 0;
@@ -399,7 +397,7 @@ LinkedList* crearListaAbono (LinkedList* this)
                 }
             }
         }
-    }
+
     return listaAbono;
 }
 
